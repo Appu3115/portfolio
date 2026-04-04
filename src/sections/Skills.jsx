@@ -6,7 +6,7 @@ import {
 } from 'react-icons/fa'
 import {
   SiTypescript, SiTailwindcss, SiSpringboot, SiMysql,
-  SiMongodb, SiPostman, SiVercel,
+  SiMongodb, SiPostman, SiVercel,SiSwagger,
 } from 'react-icons/si'
 import { HiCode, HiServer, HiDatabase, HiCog, HiAcademicCap } from 'react-icons/hi'
 import SectionHeading from '../components/SectionHeading.jsx'
@@ -20,10 +20,10 @@ const SKILL_GROUPS = [
     skills: [
       { name: 'HTML5', icon: FaHtml5, level: 90, color: '#E34F26' },
       { name: 'CSS3', icon: FaCss3Alt, level: 85, color: '#1572B6' },
-      { name: 'JavaScript', icon: FaJsSquare, level: 80, color: '#F7DF1E' },
-      { name: 'TypeScript', icon: SiTypescript, level: 65, color: '#3178C6' },
-      { name: 'React.js', icon: FaReact, level: 80, color: '#61DAFB' },
-      { name: 'Tailwind CSS', icon: SiTailwindcss, level: 82, color: '#06B6D4' },
+      { name: 'JavaScript', icon: FaJsSquare, level: 70, color: '#F7DF1E' },
+      { name: 'TypeScript', icon: SiTypescript, level: 55, color: '#3178C6' },
+      { name: 'React.js', icon: FaReact, level: 75, color: '#61DAFB' },
+      { name: 'Tailwind CSS', icon: SiTailwindcss, level: 50, color: '#06B6D4' },
     ],
   },
   {
@@ -33,8 +33,13 @@ const SKILL_GROUPS = [
     textColor: 'text-violet-400',
     skills: [
       { name: 'Java', icon: FaJava, level: 88, color: '#007396' },
-      { name: 'Spring Boot', icon: SiSpringboot, level: 82, color: '#6DB33F' },
-      { name: 'REST APIs', icon: HiServer, level: 85, color: '#00d4ff' },
+      { name: 'Spring Boot', icon: SiSpringboot, level: 90, color: '#6DB33F' },
+      { name: 'REST APIs', icon: HiServer, level:90, color: '#00d4ff' },
+      { name: 'WebSockets', icon: HiServer, level: 70, color: '#9333EA' }, 
+      { name: 'Microservices', icon: HiServer, level: 75, color: '#6366F1' },
+      { name: 'Spring Security', icon: HiServer, level: 70, color: '#22c55e' },
+      { name: 'JWT Authentication', icon: HiServer, level: 75, color: '#eab308' },
+      { name: 'API Gateway', icon: HiServer, level: 65, color: '#6366F1' },
     ],
   },
   {
@@ -45,6 +50,9 @@ const SKILL_GROUPS = [
     skills: [
       { name: 'MySQL', icon: SiMysql, level: 80, color: '#4479A1' },
       { name: 'MongoDB', icon: SiMongodb, level: 70, color: '#47A248' },
+      { name: 'JPA', icon: HiDatabase, level: 80, color: '#f59e0b' }, // 👈 added
+    { name: 'Hibernate', icon: HiDatabase, level: 78, color: '#b45309' }, // 👈 added
+    { name: 'ORM', icon: HiDatabase, level: 80, color: '#d97706' }, // 👈 added
     ],
   },
   {
@@ -53,11 +61,14 @@ const SKILL_GROUPS = [
     color: 'from-emerald-400 to-teal-600',
     textColor: 'text-emerald-400',
     skills: [
-      { name: 'Git', icon: FaGitAlt, level: 82, color: '#F05032' },
+      { name: 'Git', icon: FaGitAlt, level: 77, color: '#F05032' },
       { name: 'GitHub', icon: FaGithub, level: 82, color: '#ffffff' },
       { name: 'Postman', icon: SiPostman, level: 78, color: '#FF6C37' },
+      { name: 'Swagger', icon: SiSwagger, level: 88, color: '#85EA2D' },
       { name: 'Docker', icon: FaDocker, level: 55, color: '#2496ED' },
       { name: 'AWS', icon: FaAws, level: 50, color: '#FF9900' },
+      { name: 'CI/CD', icon: FaGitAlt, level: 65, color: '#22c55e' }, // 👈 added
+      { name: 'SMTP (Java Mail)', icon: HiCog, level: 75, color: '#ef4444' }, // 👈 added
       { name: 'Vercel / Netlify', icon: SiVercel, level: 72, color: '#ffffff' },
     ],
   },

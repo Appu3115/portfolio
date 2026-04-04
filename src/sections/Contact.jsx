@@ -167,7 +167,7 @@ export default function Contact() {
               <span className="text-gradient-cyan">great together</span>
             </h3>
             <p className="font-body text-sm dark:text-gray-400 text-gray-600 leading-relaxed mb-8">
-              I'm currently open to full-time roles, internships, and freelance projects.
+              I'm currently open to full-time roles, and freelance projects.
               Whether you have a job opportunity, a project proposal, or just want to geek out about tech —
               I'd love to hear from you!
             </p>

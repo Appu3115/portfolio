@@ -94,7 +94,7 @@ export default function About() {
             {/* Quick Info */}
             <div className="mt-7 grid grid-cols-2 gap-4">
               {[
-                { label: 'Location', value: 'India 🇮🇳' },
+                { label: 'Location', value: 'Chennai, India' },
                 { label: 'Status', value: 'Open to Work ✅' },
                 { label: 'Focus', value: 'Java Full Stack Developer' },
                 { label: 'Degree', value: 'Master of Computer Application(MCA)' },

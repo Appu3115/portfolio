@@ -2,67 +2,141 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
-import { HiTag } from 'react-icons/hi'
 import SectionHeading from '../components/SectionHeading.jsx'
 
 const PROJECTS = [
   {
     id: 1,
     title: 'FlexBid',
-    tagline: 'Multi-platform marketplace — buy products & bid for services',
+    tagline: 'Real-time Auction and Reverse Bidding E-commerce Platform',
     description:
       'FlexBid is a unified platform that eliminates the need for multiple apps by combining e-commerce product purchasing with a dynamic service-request marketplace. Users can list products, request services, and engage in real-time bidding — all in one place.',
     category: 'Full Stack',
     accent: 'from-cyan-400 to-violet-600',
     features: [
       'Dual-mode marketplace: product listing + service requests',
-      'Real-time bidding system with live auction updates',
-      'Role-based auth: buyers, sellers & service providers',
+      'Real-time bidding system with live WebSocket updates',
+      'Role-based auth: Buyer, Seller & Admin via Spring Security & Role-Based Access',
+      'SMTP email notifications for bids, orders & updates',
+      'Admin dashboard for platform oversight & user management',
       'Smart bid ranking & automated winner selection',
       'Order tracking and in-app notification system',
     ],
-    tech: ['Java', 'Spring Boot', 'React', 'MySQL', 'WebSocket', 'JWT', 'Tailwind CSS'],
-    github: 'https://github.com',
+    tech: ['Java', 'Spring Boot', 'React', 'MySQL', 'WebSocket', 'Spring Security', 'SMTP', 'CSS3', 'Hibernate','JPA'],
+    github: 'https://github.com/Appu3115',
     live: '#',
     highlight: true,
   },
+{
+  id: 2,
+  title: 'E-Commerce Website',
+  tagline: 'Full-stack shopping platform with cart, wishlist & order tracking',
+  description:
+    'A full-featured e-commerce application that enables users to browse products, manage cart and wishlist, place orders, and track order status in real time. Designed with a responsive UI and a robust Spring Boot backend ensuring smooth and secure user experience.',
+  
+  category: 'Full Stack',
+  accent: 'from-amber-400 to-orange-500',
+
+  features: [
+    'Product listing with search and category-based filtering',
+    'Shopping cart management with add/remove/update functionality',
+    'Wishlist feature for saving preferred products',
+    'Secure user authentication and profile management',
+    'Order placement with dynamic status updates (Placed, Shipped, Delivered)',
+    'Order tracking system with detailed order history',
+    'Admin controls for managing products and orders',
+  ],
+
+  tech: [
+    'Java',
+    'Spring Boot',
+    'Hibernate',
+    'JPA',
+    'React',
+    'MySQL',
+    'CSS3'
+  ],
+
+  github: 'https://github.com/Appu3115',
+  live: '#',
+  highlight: false,
+},
+ {
+  id: 3,
+  title: 'Attendance Management System',
+  tagline: 'Real-time employee tracking with attendance, productivity & leave management',
+
+  description:
+    'A real-time employee management system designed for organizations to track attendance, work activity, and productivity. The platform supports QR-based attendance, live work tracking using WebSockets, and comprehensive leave management — improving workforce visibility and operational efficiency.',
+
+  category: 'Full Stack',
+  accent: 'from-green-400 to-teal-600',
+
+  features: [
+    'QR-based attendance with secure punch-in / punch-out system',
+    'Real-time work tracking (productive vs idle time) using WebSockets',
+    'Employee dashboard with attendance, work logs, and performance insights',
+    'Leave management system with requests, approvals, and status updates',
+    'Leave balance tracking (Sick Leave, Casual Leave, etc.)',
+    'Automated email notifications for leave status and attendance alerts (SMTP)',
+    'Admin panel for managing employees, roles, holidays, and policies',
+    'Employee profile management including personal and medical details',
+  ],
+
+  tech: [
+    'Java',
+    'Spring Boot',
+    'Hibernate',
+    'JPA',
+    'React',
+    'MySQL',
+    'WebSockets',
+    'JWT',
+    'SMTP',
+    'CSS3'
+  ],
+
+  github: 'https://github.com/Appu3115',
+  live: '#',
+  highlight: true,
+},
   {
-    id: 2,
-    title: 'DevCollab',
-    tagline: 'Real-time collaborative project management for dev teams',
+    id: 4,
+    title: 'Exam Result Portal',
+    tagline: 'Secure portal for publishing and viewing exam results',
     description:
-      'A full-stack project management tool built for software development teams. DevCollab features Kanban boards, sprint planning, GitHub PR integration, and real-time collaboration via WebSockets — bringing clarity to every sprint.',
+      'An online exam result portal that allows institutions to publish results and students to securely view their scores. Designed with role-based access for admins and students, featuring a clean result display and GPA calculation.',
     category: 'Full Stack',
-    accent: 'from-violet-500 to-pink-600',
+    accent: 'from-violet-500 to-pink-500',
     features: [
-      'Drag-and-drop Kanban boards with custom lanes',
-      'Sprint planner with velocity tracking',
-      'GitHub PR integration via Webhooks',
-      'Real-time updates using WebSocket / STOMP',
-      'Team analytics dashboard with burndown charts',
+      'Admin can upload and publish results by batch/semester',
+      'Students can view subject-wise marks and GPA',
+      'Secure login with role-based access control',
+      'Result download as PDF',
+      'Topper leaderboard per semester',
     ],
-    tech: ['Java', 'Spring Boot', 'React', 'MongoDB', 'WebSocket', 'REST API', 'Docker'],
-    github: 'https://github.com',
+    tech: ['Java', 'Spring Boot', 'Angular', 'MySQL'],
+    github: 'https://github.com/Appu3115',
     live: '#',
     highlight: false,
   },
   {
-    id: 3,
-    title: 'ShopNest',
-    tagline: 'Scalable e-commerce platform with microservices architecture',
+    id: 5,
+    title: 'Personal Portfolio',
+    tagline: 'Developer portfolio showcasing skills, projects & experience',
     description:
-      'ShopNest is a production-ready e-commerce backend built on microservices. It handles product catalog, inventory, orders, and payments independently — communicating through REST and async messaging for high resilience and scale.',
-    category: 'Full Stack',
-    accent: 'from-amber-400 to-orange-600',
+      'A personal portfolio website built to showcase projects, technical skills, and professional experience. Features a modern dark-mode UI with smooth animations, responsive design, and sections for work, skills, and contact.',
+    category: 'Frontend',
+    accent: 'from-sky-400 to-blue-600',
     features: [
-      'Microservices: catalog, inventory, orders, payments',
-      'JWT + Spring Security for authentication',
-      'Razorpay / Stripe payment gateway integration',
-      'Redis caching for lightning-fast product queries',
-      'Admin dashboard with sales analytics & reports',
+      'Responsive design with dark/light mode toggle',
+      'Animated hero, skills, and project sections',
+      'Downloadable resume integration',
+      'Contact form with email integration',
+      'Optimised for performance and SEO',
     ],
-    tech: ['Java', 'Spring Boot', 'React', 'MySQL', 'Redis', 'Docker', 'AWS S3'],
-    github: 'https://github.com',
+    tech: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
+    github: 'https://github.com/Appu3115',
     live: '#',
     highlight: false,
   },
@@ -234,7 +308,7 @@ export default function Projects() {
             Want to see more? All my work is open source.
           </p>
           <a
-            href="https://github.com"
+            href="https://github.com/Appu3115"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold font-body

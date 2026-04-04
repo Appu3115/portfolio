@@ -8,46 +8,64 @@ const EXPERIENCES = [
     id: 1,
     type: 'education',
     icon: HiAcademicCap,
-    title: 'Bachelor of Technology / Engineering',
-    org: 'University / College Name',
-    period: '2020 – 2024',
-    location: 'India',
+    title: 'Master of Computer Applications (MCA)',
+    org: 'Meenakshi College of Engineering',
+    period: '2023 – 2025',
+    location: 'Chennai, India',
     accent: 'from-cyan-400 to-blue-500',
     accentText: 'text-cyan-400',
     accentBorder: 'border-cyan-400',
-    desc: 'Pursued a degree in Computer Science / Information Technology with a focus on software engineering, data structures, and web development. Consistently maintained strong academic performance while building practical skills through projects.',
+    desc: 'Pursuing a Master of Computer Applications with a strong focus on software development, data structures, and full-stack technologies. Gained hands-on experience through real-time projects involving Java, Spring Boot, and React, while building a solid foundation in system design and backend architecture.',
     tags: ['Data Structures', 'DBMS', 'Operating Systems', 'Computer Networks', 'Software Engineering'],
   },
+
   {
     id: 2,
-    type: 'project',
-    icon: HiCode,
-    title: 'Full Stack Developer — Project Intern',
-    org: 'Self-Initiated / Academic Project',
-    period: 'Jan 2024 – Apr 2024',
-    location: 'Remote',
+    type: 'experience',
+    icon: HiBriefcase,
+    title: 'Java Full Stack Developer Intern',
+    org: 'Infotroz Solutions Pvt Ltd',
+    period: 'Dec 2025 – Present',
+    location: 'Chennai, India',
     accent: 'from-violet-500 to-purple-700',
     accentText: 'text-violet-400',
     accentBorder: 'border-violet-400',
-    desc: 'Designed and developed FlexBid — a full-stack marketplace application with bidding functionality. Independently architected the backend REST APIs using Spring Boot, built a React frontend, and deployed the solution end-to-end.',
-    tags: ['Java', 'Spring Boot', 'React', 'MySQL', 'JWT', 'REST APIs'],
+    desc: 'Worked as a Java Full Stack Developer Intern, contributing to the development of a real-time Employee Attendance & Work Tracking System. Implemented backend APIs using Spring Boot, integrated WebSocket-based real-time tracking, and developed features like QR-based attendance, leave management, and productivity monitoring. Collaborated on both frontend and backend to deliver a complete enterprise solution.',
+    tags: ['Java', 'Spring Boot', 'React', 'MySQL', 'WebSockets', 'JWT', 'Hibernate', 'JPA'],
   },
+
   {
     id: 3,
-    type: 'project',
+    type: 'experience',
     icon: HiBriefcase,
-    title: 'Backend Developer — Freelance / Internship',
-    org: 'Startup / Personal Client',
-    period: 'Jun 2023 – Sep 2023',
-    location: 'Remote',
+    title: 'Software Development Engineer Intern',
+    org: 'Besant Technologies',
+    period: 'May 2025 – Oct 2025',
+    location: 'Chennai, India',
     accent: 'from-amber-400 to-orange-500',
     accentText: 'text-amber-400',
     accentBorder: 'border-amber-400',
-    desc: 'Worked on backend development for a small e-commerce platform. Responsibilities included designing RESTful APIs, implementing authentication with Spring Security + JWT, database schema design with MySQL, and writing unit tests.',
-    tags: ['Java', 'Spring Boot', 'MySQL', 'Spring Security', 'JUnit', 'Postman'],
+    desc: 'Completed internship focused on Java Full Stack Development. Built and enhanced web applications using Java, Spring Boot, and React. Gained practical exposure to REST API development, database integration, and frontend-backend communication while working on real-world use cases.',
+    tags: ['Java', 'Spring Boot', 'React', 'MySQL', 'REST APIs'],
   },
+
   {
     id: 4,
+    type: 'certification',
+    icon: HiAcademicCap,
+    title: 'Java Full Stack Development',
+    org: 'Besant Technologies',
+    period: 'Jan 2025 - Apr 2025',
+    location: 'Chennai, India',
+    accent: 'from-indigo-400 to-purple-600',
+    accentText: 'text-indigo-400',
+    accentBorder: 'border-indigo-400',
+    desc: 'Completed a comprehensive Java Full Stack Development certification covering backend development with Spring Boot, frontend development with React, RESTful APIs, and database integration. Gained hands-on experience by building real-world applications.',
+    tags: ['Java', 'Spring Boot', 'React', 'MySQL', 'REST APIs'],
+  },
+
+  {
+    id: 5,
     type: 'achievement',
     icon: HiStar,
     title: 'Open Source Contributor & DSA Practitioner',
@@ -57,7 +75,7 @@ const EXPERIENCES = [
     accent: 'from-emerald-400 to-teal-600',
     accentText: 'text-emerald-400',
     accentBorder: 'border-emerald-400',
-    desc: 'Actively solving Data Structures & Algorithms problems on LeetCode and HackerRank. Contributing to open-source repositories and maintaining personal projects on GitHub with clean commit histories and documentation.',
+    desc: 'Actively solving Data Structures & Algorithms problems and contributing to personal and open-source projects. Maintaining clean code practices, consistent commits, and improving problem-solving skills.',
     tags: ['DSA', 'LeetCode', 'Open Source', 'Problem Solving', 'Git'],
   },
 ]
@@ -101,7 +119,7 @@ function TimelineItem({ exp, i, isLast }) {
           <div className="flex flex-wrap items-center gap-2 mb-2">
             <span className={`text-[11px] font-bold uppercase tracking-widest ${exp.accentText}`}>
               {exp.type === 'education' ? '🎓 Education' :
-               exp.type === 'project' ? '💻 Experience' : '⭐ Achievement'}
+               exp.type === 'experience' ? '💻 Experience' : exp.type === 'certification' ? '📜 Certification':'⭐ Achievement'}
             </span>
             <span className="text-[11px] dark:text-gray-500 text-gray-400">•</span>
             <span className="text-[11px] font-body dark:text-gray-500 text-gray-400">
@@ -155,8 +173,8 @@ export default function Experience() {
       <div className="max-section px-6">
         <SectionHeading
           label="My Journey"
-          title="Experience & Education"
-          subtitle="From classrooms to real-world projects — here's how I've grown as a developer."
+          title="Education & Experience"
+          subtitle="From classroom discussions to company meetings — from Instagram scrolling to LinkedIn networking, from exam applications to job applications — here’s how I’ve grown as a developer."
         />
 
         <div className="max-w-3xl mx-auto">
@@ -180,9 +198,11 @@ export default function Experience() {
             dark:border-dark-border border-light-border border"
         >
           <p className="font-body text-sm dark:text-gray-400 text-gray-600">
-            🚀 <strong className="dark:text-white text-gray-900">Fresher / Entry-Level</strong> — I'm at the exciting start of my professional journey,
-            bringing strong fundamentals, real project experience, and an eagerness to grow fast in a collaborative team.
-          </p>
+  🚀 <strong className="dark:text-white text-gray-900">Fresher / Entry-Level</strong> — Early in my career, 
+  but experienced in building real-world projects, solving practical problems, 
+  and continuously leveling up as a developer, with a strong foundation in Java full stack development and 
+  a passion for creating scalable, impactful applications.
+</p>
         </motion.div>
       </div>
     </section>
